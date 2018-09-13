@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Notification from './Notification'
+import Notification from '../classes/Notification'
 
 export default {
   props: {

@@ -1,5 +1,5 @@
-import Notification from './Notification'
-import Notifiable from './Notify.vue'
+import Notification from './classes/Notification'
+import Notifiable from './components/Container.vue'
 
 const defaultNotification = new Notification(
   'Default title',
