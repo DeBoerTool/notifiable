@@ -1,5 +1,6 @@
 import Notification from './classes/Notification'
 import Notifiable from './components/Container.vue'
+import HttpError from './classes/HttpError'
 
 const defaultNotification = new Notification(
   'Default title',
@@ -80,6 +81,15 @@ export default {
             'success',
             showFor
           ))
+        },
+
+        /**
+         * Push an HTTP error onto the stack.
+         * @param {Object} error
+         * @param {String|null} message
+         */
+        error (error, message = null) {
+          this.pushToStack(new HttpError(error, message))
         },
       },
 
